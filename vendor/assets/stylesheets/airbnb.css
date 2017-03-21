@@ -1,0 +1,380 @@
+/*
+ * PATRICK CAVALCANTE MAGALHAES
+ * 20/03/2016 20:16;
+ */
+@font-face {
+    font-family: Circular;
+    src: url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book-a952ee2c4bd292728a2439f767e3a260.eot");
+    src: url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book-a952ee2c4bd292728a2439f767e3a260.eot?#") format("eot"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book-1f5a0275bdd69dbbeadffab401c698a2.woff2") format("woff2"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book-7f15c543c7006815105f5df71824836d.woff") format("woff"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book-98e37c7514bb7096658cabbf6d43e783.svg") format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+@font-face {
+    font-family: Circular;
+    src: url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book_Italic-35e1cf57d93dc4eb3db11cc2448cb91f.eot");
+    src: url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book_Italic-35e1cf57d93dc4eb3db11cc2448cb91f.eot?#") format("eot"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book_Italic-4909b413294f9048153d6dee23438b24.woff2") format("woff2"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book_Italic-1db902f5b85bbb0964e2994434edbe16.woff") format("woff"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Book_Italic-0d9eb203b260869dc2470ae35162fc1e.svg") format("svg");
+    font-weight: normal;
+    font-style: italic
+}
+@font-face {
+    font-family: Circular;
+    src: url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Bold-c4da182b004982220ffd5caf5555cf2d.eot");
+    src: url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Bold-c4da182b004982220ffd5caf5555cf2d.eot?#") format("eot"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Bold-7ceb09864a7ed03b9c10cfa2f7281315.woff2") format("woff2"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Bold-eacfa7beaa999351b4f89935e0126b19.woff") format("woff"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Bold-190e0f26359cdc7d8d093e1a04983ed3.svg") format("svg");
+    font-weight: 700;
+    font-style: normal
+}
+@font-face {
+    font-family: Circular;
+    src: url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Light-3d9fa9ce4a6feb3bb7eab142470dd7d3.eot");
+    src: url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Light-3d9fa9ce4a6feb3bb7eab142470dd7d3.eot?#") format("eot"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Light-42f300daf805956564cdf1fcb56d2c6f.woff2") format("woff2"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Light-1cf016706a26eb4bf820dca2dca82c9f.woff") format("woff"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/Circular_Air-Light-ea56415eb35466568fd22e41c7352796.svg") format("svg");
+    font-weight: 200;
+    font-style: normal
+}
+@font-face {
+    font-family: Airmoji_Standalone;
+    src: url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/airmojix-Regular-6d1aa90c9b29d2c328c0e3361784f186.eot");
+    src: url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/airmojix-Regular-6d1aa90c9b29d2c328c0e3361784f186.eot?#") format("eot"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/airmojix-Regular-82dbbc6498b432a4a6bc7c2025998c9a.woff2") format("woff2"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/airmojix-Regular-853c0d1a611d54338faf0ebe2fe96053.woff") format("woff"), url("https://a0.muscache.com/airbnb/static/airbnb-o2/fonts/airmojix-Regular-ad76fa9e85d2b02a85cc9f41bf7f75c9.svg") format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+body {
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #484848;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
+    font-weight: normal;
+    line-height: 1;
+    text-transform: none;
+    color: #767676;
+}
+
+h2 small, .h2 small {
+    font-size: 20px;
+}
+
+hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 0;
+    border-top: 1px solid #dce0e0;
+}
+
+h6, .h6 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #767676;
+}
+
+.icon_logo {
+    color: #FF5A5F !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    font-size: 34px !important;
+    -webkit-transition: 1s color !important;
+    -moz-transition: 1s color !important;
+    transition: 1s color !important;
+    margin-left: 9px;
+}
+
+.navbar-default {
+	border-color: transparent;
+}
+
+.nav a {
+	color: #484848 !important;
+	
+}
+
+.nav li>a:hover {
+
+    border-bottom: 2px solid #484848 !important;
+}
+
+.link_navbar {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    background: transparent !important;
+    border: none !important;
+    color: inherit !important;
+    display: block !important;
+    height: 64px !important;
+    line-height: 64px !important;
+    text-decoration: none !important;
+    margin: 5px !important;
+    position: relative !important;
+    padding: 0 16px !important;
+    white-space: nowrap !important;
+}
+
+.orange-color {
+    font-weight: 700 !important;
+    color: #FF5A5F !important;
+}
+
+.textHeader {
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    font-size: 48px !important;
+    line-height: 56px !important;
+    letter-spacing: -0.8px !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    color: #484848 !important;
+    font-weight: 200 !important;
+}
+@media (max-width: 743px){
+	.textHeader {
+    	font-size: 25px !important;
+    	line-height: 30px !important;
+    	letter-spacing: -0.6px !important;
+    	margin: auto;
+    	text-align: center;
+	}
+}
+
+.container{
+	max-width: 1080px !important;
+}
+
+
+/* MODAL LOGIN */
+.modal-content  {
+    -webkit-border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+    border-radius: 2px !important; 
+    box-shadow: none !important;
+    margin-top: 0px !important;
+    border: none;
+    max-width: 450px;
+    margin: 0px auto;
+     -webkit-box-shadow: 0 5px 15px rgba(0,0,0,0);
+    -moz-box-shadow: 0 5px 15px rgba(0,0,0,0);
+    -o-box-shadow: 0 5px 15px rgba(0,0,0,0);
+    box-shadow: 0 5px 15px rgba(0,0,0,0);
+}
+
+.modal-body{
+	padding: 10px 30px 30px;
+}
+.modal-open,.a:focus{
+    outline:none!important
+}
+
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+/* social */
+.social-buttons{
+	margin-top: 25px;
+}
+.icon-btn.btn-large {
+    position: relative;
+    padding-left: 51px;
+}
+
+.btn-facebook:hover, .btn-facebook:focus {
+    border-color: #4568b2;
+    /* background-color: #4568b2; */
+    color: #fff;
+}
+
+.signup-login {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    padding-left: 27px !important;
+    padding-right: 27px !important;
+    font-weight: normal;
+}
+
+.space-1 {
+    margin-bottom: 6px;
+}
+
+.btn-block {
+    display: block;
+    white-space: normal;
+    width: 100%;
+}
+
+.btn-facebook {
+    border-color: #3B5998;
+    background-color: #3B5998;
+    color: #fff;
+}
+
+.btn-google {
+      border-color: #c4c4c4;
+    background: white;
+    color: #484848;
+}
+
+.btn-primary {
+    border-color: #ff5a5f;
+    background-color: #ff5a5f;
+    color: #fff;
+}
+
+.icon-btn.btn-large .icon {
+
+    font-size: 24px;
+ 	float: left;
+}
+
+.space-top-3 {
+    margin-top: 18px;
+}
+
+.signup-or-separator {
+    background: none;
+    height: 34px;
+    position: relative;
+    text-align: center;
+}
+
+.signup-or-separator--text {
+    background-color: #fff;
+    display: inline-block;
+    padding: 8px;
+}
+
+.signup-or-separator hr {
+    margin: -25px auto 10px;
+    width: 100%;
+}
+
+
+
+.signup-login-form__btn-rausch-border, .signup-login-form__btn-rausch-border:hover {
+    border: 1px solid #ff5a5f;
+    color: #ff5a5f;
+    background-color: #fff;
+}
+
+/*form*/
+.decorative-input[type=email] {
+    background-position: right -40px;
+}
+.decorative-input[type=password], .decorative-input.otp-input, .decorative-input.recaptcha_response_field {
+    background-position: right -90px;
+}
+
+.decorative-input {
+    background-image: url(https://a0.muscache.com/airbnb/static/signinup/text-field-icons-72d5ec863b1ef7c22391015ec8af5906.png);
+    background-repeat: no-repeat;
+    background-position: right 9px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    font-size: 14px;
+    height: 40px;
+    padding: 10px 35px 10px 10px;
+    width: 100% !important;
+    -webkit-background-size: 40px 171px;
+    -moz-background-size: 40px 171px;
+    -o-background-size: 40px 171px;
+    background-size: 40px 171px;
+}
+
+[type="text"], [type="password"], [type="search"], [type="email"], [type="url"], [type="number"], [type="tel"], textarea, select, .input-prefix, .input-suffix {
+    display: block;
+    padding: 8px 10px;
+    width: 100%;
+}
+
+[type="text"], [type="password"], [type="search"], [type="email"], [type="url"], [type="number"], [type="tel"], textarea, select, input[type="radio"], input[type="checkbox"] {
+    -webkit-transition: border-color .2s;
+    -o-transition: border-color .2s;
+    -moz-transition: border-color .2s;
+    transition: border-color .2s;
+}
+
+[type="text"], [type="password"], [type="search"], [type="email"], [type="url"], [type="number"], [type="tel"], textarea, select, input[type="radio"], input[type="checkbox"], .input-prefix, .input-suffix {
+    border: 1px solid #aaa;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+    color: #484848;
+}
+
+input, textarea, .input-prefix, .input-suffix {
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+label, input, textarea, select, input[type="radio"], input[type="checkbox"], .input-prefix, .input-suffix {
+    line-height: normal;
+}
+
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+button, input {
+    line-height: normal;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+}
+
+.checkbox, .checkbox input {
+    cursor: pointer;
+}
+label {
+    display: block;
+    padding-top: 9px;
+    padding-bottom: 8px;
+}
+
+label, input, textarea, select, input[type="radio"], input[type="checkbox"], .input-prefix, .input-suffix {
+    line-height: normal;
+}
+
+
+input[type="radio"], input[type="checkbox"] {
+    position: relative;
+    -webkit-appearance: none;
+    height: 1.25em;
+    width: 1.25em;
+    margin-bottom: -.25em;
+    margin-right: 5px;
+    vertical-align: top;
+}
+input[type="checkbox"]:checked:before {
+    content: "\2713";
+    position: absolute;
+    font-size: 0.85em;
+    left: 1px;
+    text-align: center;
+    width: 1.25em;
+    color: #008489;
+}

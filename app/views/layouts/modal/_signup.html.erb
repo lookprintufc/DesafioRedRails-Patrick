@@ -1,0 +1,113 @@
+<!-- Modal HTML -->
+<div id="login" class="modal fade ">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-body">
+            <h2><small>Cadastre-se para fazer parte da comunidade confiável do Airbnb formada por milhões de pessoas e tenhas suas próprias experiências únicas.</small></h2>
+            <div class="social-buttons">
+               <form accept-charset="UTF-8" action="/oauth_connect?from=facebook_signup&amp;service=facebook" method="post">
+                  <button class="btn icon-btn btn-block signup-login space-1 btn-large btn-facebook" name="button" type="submit">
+                  <span class="icon-container">
+                  <i class="fa fa-facebook icon" aria-hidden="true"></i>
+                  </span>
+                  <span class="text-container">Cadastre-se com Facebook</span>
+                  </button>
+               </form>
+               <form accept-charset="UTF-8" action="/oauth_connect?from=google_signup&amp;service=google" method="post">
+                  <button class="btn icon-btn btn-block signup-login  btn-large btn-google " name="button" type="submit">
+                  <span class="text-container">Cadastre-se com Google</span>
+                  </button>
+               </form>
+               <div class="signup-or-separator">
+                  <span class="h6 signup-or-separator--text">ou</span>
+                  <hr>
+               </div>
+             <div id="email_register_form" hidden="">
+               <form action="/create" class="signup-form" method="post" style="margin-top: 15px">
+                  <div class="signup-form-fields">
+                     <input id="from" name="from" type="hidden" value="email_signup">
+                     <input id="referral_signup_default_redirect" name="referral_signup_default_redirect" type="hidden" value="false">
+                     <div class="control-group space-1" id="inputEmail">
+                        <input type="email" name="user[email]" aria-label="Endereço de email" placeholder="Endereço de email" id="signup_email" value="" class="decorative-input inspectletIgnore">
+                     </div>
+                     <div class="control-group space-1" id="inputFirst">
+                        <input type="text" name="user[first_name]" id="signup_first_name" aria-label="Primeiro nome" placeholder="Primeiro nome" class="decorative-input" value="">
+                     </div>
+                     <div class="control-group space-1" id="inputLast">
+                        <input type="text" name="user[last_name]" id="signup_last_name" aria-label="Último nome" placeholder="Último nome" class="decorative-input inspectletIgnore" value="">
+                     </div>
+                     <div class="control-group space-1" id="inputPassword">
+                        <input type="password" id="user_password" data-hook="user_password" name="user[password]" aria-label="Criar uma senha" placeholder="Criar uma senha" class="decorative-input inspectletIgnore">
+                     </div>
+                     <fieldset class=" space-top-3 space-1" style="margin-bottom: 15px">
+                        <strong style="font-size: 14px">Aniversário</strong>
+                        <strong id="birthday-signup-form-question-trigger">
+                        <i class="icon icon-question"></i>
+                        </strong>
+                        <div class="control-group row row-condensed space-2">
+                           <div class="col-sm-5">
+                              <div class="select va-container-h">
+                                <%= select_day(nil, prompt: 'Dia') %>
+                              </div>
+                           </div>
+                           <div class="col-sm-3">
+                              <div class="select va-container-h">
+                                 <%= select_date nil, order: [:month], prompt: 'Mês' %>
+                              </div>
+                           </div>
+                           <div class="col-sm-4">
+                              <div class="select va-container-h">
+                                 <%= select_date nil, order: [:year], :start_year => Date.current.year - 13, :end_year => 1920, prompt: 'Ano' %>
+                              </div>
+                           </div>
+                        </div>
+                     </fieldset>
+                     <div class="pull-left">
+                        <input checked="checked" id="user_profile_info_receive_promotional_email" name="user_profile_info[receive_promotional_email]" type="checkbox" value="1">
+                     </div>
+                     <div for="" class="checkbox">
+                        Eu gostaria de receber informações promocionais, incluindo descontos, pesquisas, inspirações e amor do Airbnb por email, SMS e telefone.
+                     </div>
+                     <div class="space-2 space-top-2">
+                        <div>
+                           <div>
+                              <small>
+                              Ao me cadastrar, eu concordo com os <a href="/terms?source=tos" target="_blank">Termos de Serviço</a>, a <a href="/terms/nondiscrimination_policy?source=tos" target="_blank">Política de Não Discriminação</a>, os <a href="/terms/payments_terms?source=tos" target="_blank">Termos de Serviço de Pagamentos</a>, a <a href="/terms/privacy_policy?source=tos" target="_blank">Política de Privacidade</a>, a <a href="/terms/guest_refund_policy?source=tos" target="_blank">Política de Reembolso do Hóspede</a> e os <a href="/terms/host_guarantee?source=tos" target="_blank">Termos da Garantia ao Anfitrião</a> do Airbnb.
+                              </small>
+                           </div>
+                        </div>
+                     </div>
+                    
+                     <button type="submit" class="btn btn-primary btn-block signup-login btn-large" id="user-email-signup-btn" style="margin-top: 12px">
+                     Cadastre-se
+                     </button>
+                  </div>
+               </form>
+               </div>
+               <div id="email_register_buttom">
+                  <a href="javascript:void(0)" class="create-using-email btn-block signup-login space-2 btn btn-primary btn-block signup-login-form__btn-xl btn-large large icon-btn" id="create_using_email_button" style="margin-top: 15px"><i class="icon icon-envelope"></i>Cadastre-se com o E-mail</a>
+                
+
+                  <div id="tos_outside" class="space-top-3">
+                     <div>
+                        <div>
+                           <small>
+                           Ao me cadastrar, eu concordo com os <a href="/terms?source=tos" target="_blank">Termos de Serviço</a>, a <a href="/terms/nondiscrimination_policy?source=tos" target="_blank">Política de Não Discriminação</a>, os <a href="/terms/payments_terms?source=tos" target="_blank">Termos de Serviço de Pagamentos</a>, a <a href="/terms/privacy_policy?source=tos" target="_blank">Política de Privacidade</a>, a <a href="/terms/guest_refund_policy?source=tos" target="_blank">Política de Reembolso do Hóspede</a> e os <a href="/terms/host_guarantee?source=tos" target="_blank">Termos da Garantia ao Anfitrião</a> do Airbnb.
+                           </small>
+                        </div>
+                     </div>
+                  </div>
+                 </div>
+            </div>
+         </div>
+         <div class="modal-footer">
+            <div class="clearfix">
+               <span class="signup-login-form__switch-copy" style="float: left; margin-top: 7px; font-size: 16px;">Você ainda não tem uma conta?</span>
+               <a onclick="$('#login').modal('toggle');" href="#login-in" data-toggle="modal" class="modal-link link-to-login-in-signup btn btn-default signup-login-form__btn-rausch-border" >
+               Cadastre-se
+               </a>  
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
