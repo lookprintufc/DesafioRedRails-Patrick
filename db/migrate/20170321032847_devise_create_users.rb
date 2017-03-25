@@ -6,18 +6,17 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :encrypted_password, null: false, default: ""
 
 
-      t.string :first_name, null: false, default: ""
-      t.string :last_name, null: false, default: ""
-      t.string :sex, null: false, default: ""
-      t.date :birthdate, null: false, default: ""
-      t.date :phone_number, null: false, default: ""
-      t.string :current_city, null: false, default: ""
-      t.string :about, null: false, default: ""
-      t.string :profile_pic, null: false, default: ""
-      t.string :current_city, null: false, default: ""
-      t.string :current_city, null: false, default: ""
+      t.string :first_name, null: false
+      t.string :last_name, null: false
+      t.string :sex
+      t.date :birthdate
+      t.date :phone_number
+      t.string :current_city
+      t.string :about
+      t.string :profile_pic
+      t.string :current_city
 
-      current_city
+
 
 
       ## Recoverable

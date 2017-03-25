@@ -1,0 +1,105 @@
+
+ <% if @place.errors.any? %>
+<%= pluralize(@place.errors.count, "erros") %> encontrados: </br><ul><% @place.errors.full_messages.each do |message| %><li><%= message %></li><% end %></ul>
+
+<% end %>
+
+<div class="row">
+   <div class="col-md-6 form-box">
+      <%= form_for(@place, :html => {class: "registration-form",:multipart => true}, method: "post") do |f| %>
+         <fieldset>
+            <div class="form-top">
+               <div class="form-top-left">
+                  <h3>Que tipo de espaço você tem?</h3>
+                  </p>
+               </div>
+            </div>
+            <div class="form-bottom">
+               <div class="row">
+                  <div class="form-group col-md-6 col-sm-6">
+                     <%= f.text_field :title, class: "form-control", placeholder: "Nome"%>
+                  </div>
+
+                  <div class="form-group col-md-6 col-sm-6">
+                      <%= f.select :place_type_id, options_for_select(PlaceType.all.map { |d| [d.name, d.id] }), class: 'form-control' %>
+                  </div>
+
+                 
+               </div>
+               <div class="form-group" style="margin-bottom:3px;">
+                  <div class="row">
+                     <div class="form-group col-md-4 col-sm-4">
+                        <select name="place[accomodate_limit]" >
+                           <option selected="" value="1">para 1 hóspede</option>
+                           <option value="2">para 2 hóspedes</option>
+                           <option value="3">para 3 hóspedes</option>
+                           <option value="4">para 4 hóspedes</option>
+                           <option value="5">para 5 hóspedes</option>
+                           <option value="6">para 6 hóspedes</option>
+                           <option value="7">para 7 hóspedes</option>
+                           <option value="8">para 8 hóspedes</option>
+                           <option value="9">para 9 hóspedes</option>
+                           <option value="10" >para 10 hóspedes</option>
+                           <option value="11">para 11 hóspedes</option>
+                           <option value="12">para 12 hóspedes</option>
+                           <option value="13">para 13 hóspedes</option>
+                           <option value="14">para 14 hóspedes</option>
+                           <option value="15">para 15 hóspedes</option>
+                           <option value="16">para 16 hóspedes</option>
+                        </select>
+                     </div>
+                     <div class="form-group col-md-8 col-sm-8">
+
+                     <%= f.text_field :address, id: 'pac-input', class: "form-control", placeholder: "Endereço"%>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="form-group col-sm-4">
+                     <%= f.text_field :bed_limit, class: "form-control", placeholder: "Qnt. de Camas"%>
+                  </div>
+                  <div class="form-group col-sm-4">
+                     <%= f.text_field :bathroom_limit, class: "form-control", placeholder: "Qnt. de Banheiros"%>
+                  </div>
+                  <div class="form-group col-sm-4">
+                     <%= f.text_field :room_limit, class: "form-control", placeholder: "Qnt. de Quartos"%>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="form-group col-sm-12">
+                      <%= f.text_field :price, class: "form-control", placeholder: "Preço"%>
+                  </div>
+
+                  <div class="form-group col-sm-12">
+                     <%= f.text_area(:description,  class: "form-control", placeholder: "Explique sobre o seu espaço e quais as suas vantagens.") %>
+                  </div>
+                  <div class="form-group col-sm-12">
+                     <label for="exampleInputPassword1">Facilidades</label>
+
+                        <%= select_tag 'amenities[]', options_for_select(Amenitie.all.map { |d| [d.name, d.id] }, AmenitiesPlace.where(place_id: params[:place_id]).map { |d| d.amenitie.id }), class: 'form-control',id: 'pre-selected-options', multiple: 'multiple' %>
+
+                  </div>
+                  <div class="form-group col-sm-12">
+                  <label>Imagem de Capa</label>
+                       <%= f.file_field :photo, class: "dropify", 'data-default-file' => @place.photo %>
+                  </div>
+               </div>
+               <button type="submit" class="btn  btn-babu ">Salvar</button>
+            </div>
+         </fieldset>
+      <% end %>
+   </div>
+   <div class="col-md-6">
+      <h3 id="set_text_map"></h3>
+      <div id="map"></div>
+      <div id="infowindow-content">
+         <img src="" width="16" height="16" id="place-icon">
+         <span id="place-name"  class="title"></span><br>
+         <span id="place-address"></span>
+      </div>
+   </div>
+</div>
+
+
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlY0F1F4m7edt4LZOcSUMRBYVSb7-KA8E&libraries=places&callback=initMap"
+        async defer></script>

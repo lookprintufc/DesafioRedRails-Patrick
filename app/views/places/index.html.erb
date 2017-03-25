@@ -1,0 +1,22 @@
+<div id="photos" class="with-photos with-modal"><span class="cover-photo" data-reactid="7"><img alt="" class="hide" src="<%= @place.photo %>" ><span class="cover-img-container" data-hook="cover-img-container"><div class="cover-img" style="background-image:url(<%= @place.photo %>); background-size: cover;"><div class="link-reset panel-overlay-bottom-left panel-overlay-label panel-overlay-listing-label show-sm" data-reactid="11"><div>
+</div></div></div></span></span></div>
+
+
+<div class="container">
+         <div class="row">
+            <h1 class="textHeader"><%= @place.title %> - Dono: <%= @place.user.first_name %> </h1>
+
+             <ul class="list-group">
+    <li class="list-group-item"><%= @place.room_limit %> Quarto</li>
+    <li class="list-group-item"><%= @place.bed_limit %> Cama</li>
+    <li class="list-group-item"><%= @place.accomodate_limit %> Hóspedes</li>
+    <li class="list-group-item"><%= @place.place_type.name %></li>
+
+  </ul>
+
+  <h2>Informações sobre este espaço</h2>
+
+<span ><%= @place.description %></span>
+
+         </div>
+      </div>

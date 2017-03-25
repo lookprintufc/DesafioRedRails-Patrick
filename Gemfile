@@ -30,9 +30,13 @@ gem 'jbuilder', '~> 2.5'
 
 # PATRICK 
 gem 'devise'
-gem 'omniauth-facebook'
+gem 'omniauth'
+gem 'omniauth-facebook', '4.0.0'
 gem 'devise-i18n'
 gem 'carrierwave', '~> 1.0'
+gem 'faker'
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

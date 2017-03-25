@@ -1,7 +1,10 @@
 /*
  *= require bootstrap/bootstrap.css
  *= require font-awesome/css/font-awesome.css
+ *= require select/multi-select.css
  *= require airbnb.css
+ *= require dropify/dropify.css
+ *= require toast/toastr.css
  *= require_tree .
  *= require_self
  */

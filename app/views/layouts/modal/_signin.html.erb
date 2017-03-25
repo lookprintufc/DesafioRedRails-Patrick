@@ -4,25 +4,26 @@
       <div class="modal-content">
          <div class="modal-body">
             <div class="social-buttons">
-               <form accept-charset="UTF-8" action="" method="post">
+               <%= form_tag(user_facebook_omniauth_authorize_path, method: "get") do %>
                   <button class="btn icon-btn btn-block signup-login btn-large btn-facebook" name="button" type="submit" style="margin-bottom: -10px">
                   <span class="icon-container">
                   <i class="fa fa-facebook icon" aria-hidden="true"></i>
                   </span>
-                  <span class="text-container">Cadastre-se com Facebook</span>
+                  <span class="text-container">Conecte-se com Facebook</span>
                   </button>
-               </form>
+               <% end %>
               
                <div class="signup-or-separator space-1">
                   <span class="h6 signup-or-separator--text">ou</span>
                   <hr>
                </div>
 
-                <form accept-charset="UTF-8" action="/oauth_connect?from=google_signup&amp;service=google" method="post">
+                <%= link_to new_user_session_path do %>
                   <button class="btn icon-btn btn-block signup-login btn-large btn-google " name="button" type="submit">
                   <span class="text-container">Mais Opções de login</span>
                   </button>
                </form>
+               <% end %>
      
            
             </div>

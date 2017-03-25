@@ -5,14 +5,16 @@
          <div class="modal-body">
             <h2><small>Cadastre-se para fazer parte da comunidade confiável do Airbnb formada por milhões de pessoas e tenhas suas próprias experiências únicas.</small></h2>
             <div class="social-buttons">
-               <form accept-charset="UTF-8" action="/oauth_connect?from=facebook_signup&amp;service=facebook" method="post">
+               <%= form_tag(user_facebook_omniauth_authorize_path, method: "get") do %>
                   <button class="btn icon-btn btn-block signup-login space-1 btn-large btn-facebook" name="button" type="submit">
                   <span class="icon-container">
                   <i class="fa fa-facebook icon" aria-hidden="true"></i>
                   </span>
                   <span class="text-container">Cadastre-se com Facebook</span>
+
                   </button>
-               </form>
+               <% end %>
+
                <form accept-charset="UTF-8" action="/oauth_connect?from=google_signup&amp;service=google" method="post">
                   <button class="btn icon-btn btn-block signup-login  btn-large btn-google " name="button" type="submit">
                   <span class="text-container">Cadastre-se com Google</span>
@@ -23,7 +25,8 @@
                   <hr>
                </div>
              <div id="email_register_form" hidden="">
-               <form action="/create" class="signup-form" method="post" style="margin-top: 15px">
+             
+               <form action="/inscription" class="signup-form" method="post" style="margin-top: 15px">
                   <div class="signup-form-fields">
                      <input id="from" name="from" type="hidden" value="email_signup">
                      <input id="referral_signup_default_redirect" name="referral_signup_default_redirect" type="hidden" value="false">

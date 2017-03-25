@@ -378,3 +378,242 @@ input[type="checkbox"]:checked:before {
     width: 1.25em;
     color: #008489;
 }
+
+/* INICIO CATEGORIAS */
+.rowHeader{
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    font-size: 19px !important;
+    line-height: 24px !important
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    color: #484848 !important;
+    margin-bottom: 24px !important;
+}
+
+.rowHeader_host {
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    font-size: 32px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    color: #484848 !important;
+    margin-bottom: 24px !important;
+}
+
+.box_individual_room{
+     border: 2px solid red;
+}   
+
+.box_room {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    white-space: nowrap;
+
+    margin:0;
+    padding: 0;
+
+    margin-left:-20px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+
+}
+.box_room>li {
+    flex-grow: 1;
+    min-width: 255px !important;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    position: relative;
+    margin: 0px 15px 30px 5px;
+    padding: 25px 20px 75px 20px;
+    border-color: #E2E6E7;
+    list-style: none;
+    height: 232px;
+
+
+}
+
+
+.text_box_bottom {
+    font-weight: 700 !important;
+    color: #484848 !important;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    word-wrap: break-word !important;
+    font-size: 15px !important;
+    line-height: 18px !important;
+    letter-spacing: 0.2px !important;
+    margin-top: 212px;
+    margin-left: -20px;
+    float: left;
+    text-align: left;
+        overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 255px;
+
+}
+.box_room>li>.text_box_bottom>span{
+    font-weight: 200 !important;
+}
+
+
+
+.button-paginate2 {
+    cursor: pointer !important;
+    background-color: transparent !important;
+    border: 0px !important;
+    display: block !important;
+    float: left;
+
+}
+
+
+
+.avatar_menu {
+    background-color: #F2F2F2 !important;
+    box-shadow: 0 0 0 2px #DBDBDB !important;
+    border-radius: 50% !important;
+    display: inline-block !important;
+    overflow: hidden !important;
+    vertical-align: middle !important;
+    width: 28px !important;
+    height: 28px !important;
+}
+.dropdown_trick{
+    width: 282px;
+    box-shadow: none;
+}
+.dropdown_trick>li>a {
+    /* display: table !important; */
+    padding: 16px 20px !important;
+    color: #484848 !important;
+    border-bottom: 1px solid #F2F2F2 !important;
+    width: 100% !important;
+}
+
+
+/* MAPS*/
+ #description {
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+      }
+
+      #infowindow-content .title {
+        font-weight: bold;
+      }
+
+      #infowindow-content {
+        display: none;
+      }
+
+      #map #infowindow-content {
+        display: inline;
+      }
+
+      .pac-card {
+        margin: 10px 10px 0 0;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        background-color: #fff;
+        font-family: Roboto;
+      }
+
+      #pac-container {
+        padding-bottom: 12px;
+        margin-right: 12px;
+      }
+
+      .pac-controls {
+        display: inline-block;
+        padding: 5px 11px;
+      }
+
+      .pac-controls label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+      }
+
+
+
+      #pac-input:focus {
+        border-color: #4d90fe;
+      }
+
+      #title {
+        color: #fff;
+        background-color: #4d90fe;
+        font-size: 25px;
+        font-weight: 500;
+        padding: 6px 12px;
+      }
+
+       #map {
+        height: 805px;
+        width: 100%;
+      }
+/* MAPS FIM */
+
+/* footer */
+@media (min-width: 744px){
+#footer {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+}
+.container-brand-light {
+    width: 100%;
+    padding: 18px 0;
+    background-color: #fff;
+    color: #484848;
+    border-top: 1px solid #dce0e0;
+    margin-top: 40px !important;
+}
+
+.text_footer {
+
+    font-weight: normal !important;
+    color: #767676 !important;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    margin: 0px !important;
+    word-wrap: break-word !important;
+    font-size: 15px !important;
+    line-height: 18px !important;
+    letter-spacing: 0.2px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+/* footer fim */
+
+.btn-babu {
+    border-color: #00a699;
+    border-bottom-color: #007d73;
+    background-color: #00a699;
+    color: #fff;
+}
+#photos {
+    height: 402px;
+    position: relative;
+    margin-top: -30px;
+    width: 100%;
+    -webkit-transition: height .2s;
+    -o-transition: height .2s;
+    -moz-transition: height .2s;
+    transition: height .2s;
+}
+#photos .cover-img-container .cover-img {
+    background-repeat: no-repeat;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-color: #f5f5f5;
+    height: 100%;
+}

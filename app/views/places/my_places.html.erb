@@ -1,0 +1,29 @@
+<div class="container">
+   <div class="row">
+      <h3 class="rowHeader">
+         <span style="float: left;">Meus Locais</span>
+         <button onclick=" scroll_home(0,'animate_1');" class="button-paginate2" type="button" style="padding: 0px;">
+            <svg viewBox="0 0 18 18" aria-hidden="true" focusable="false" style="fill: rgb(118, 118, 118); height: 24px; width: 24px;">
+               <path fill-rule="evenodd" d="M13.703 16.293a1 1 0 1 1-1.415 1.414l-7.995-8a1 1 0 0 1 0-1.414l7.995-8a1 1 0 1 1 1.415 1.414L6.413 9l7.29 7.293z"></path>
+            </svg>
+         </button>
+         <button onclick=" scroll_home(1,'animate_1');" class="button-paginate2" type="button" style="padding: 0px;">
+            <svg viewBox="0 0 18 18" aria-hidden="true" focusable="false" style=" fill: rgb(118, 118, 118); height: 24px; width: 24px;">
+               <path fill-rule="evenodd" d="M4.293 1.707A1 1 0 1 1 5.708.293l7.995 8a1 1 0 0 1 0 1.414l-7.995 8a1 1 0 1 1-1.415-1.414L11.583 9l-7.29-7.293z"></path>
+            </svg>
+         </button>
+         </br>
+      </h3>
+      <div class="col-sm-12">
+         <ul class="box_room animate_1">
+            <% @places.each do |place| %>
+                  <li style="background-image: url(<%=place.photo %>);background-size: cover; "> <%= link_to  edit_place_path(place) do%>
+                     <div class="text_box_bottom"><%=number_to_currency(place.price) %> <%=place.title %>!</br><span>3/5 reservas</span></div><% end %>
+                  </li>
+               
+            <% end %>
+           
+         </ul>
+      </div>
+   </div>
+</div>

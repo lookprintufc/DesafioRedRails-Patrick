@@ -7,7 +7,7 @@ Devise.setup do |config|
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '25a4f1f43667c41549a60d840145fb48869d7374a9b52a7cb77dfd90a3d7019c813d0d582d4ffeb6131c0b1e031a18b5505ea6bd78a34b733a387ab3af67820f'
-  config.omniauth :facebook,  Rails.application.secrets.app_id, Rails.application.secrets.app_secret
+  config.omniauth :facebook,  Rails.application.secrets.app_id, Rails.application.secrets.app_secret,  scope: "email, user_birthday", info_fields: 'name, gender, email, birthday'
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
@@ -223,7 +223,7 @@ Devise.setup do |config|
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
   # "users/sessions/new". It's turned off by default because it's slower if you
   # are using only default views.
-  # config.scoped_views = false
+  config.scoped_views = true
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).
