@@ -76,7 +76,7 @@
                   <div class="form-group col-sm-12">
                      <label for="exampleInputPassword1">Facilidades</label>
 
-                        <%= select_tag 'amenities[]', options_for_select(Amenitie.all.map { |d| [d.name, d.id] }, AmenitiesPlace.where(place_id: params[:place_id]).map { |d| d.amenitie.id }), class: 'form-control',id: 'pre-selected-options', multiple: 'multiple' %>
+                        <%= select_tag 'amenities[]', options_for_select(Amenitie.all.map { |d| [d.name, d.id] }, AmenitiesPlace.where(place_id: params[:id_place]).map { |d| d.amenitie.id }), class: 'form-control',id: 'pre-selected-options', multiple: 'multiple' %>
 
                   </div>
                   <div class="form-group col-sm-12">
